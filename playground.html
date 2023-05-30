@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground - CSS Blueprint</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/playground.css">
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            CSS Blueprint
+        </div>
+    </header>
+
+    <main>
+        <h2>Playground</h2>
+
+        <div class="internal">
+            <a href="index.html">Blueprint</a>
+        </div>
+
+        <section>
+            <h3>Text decorations</h3>
+            <div>
+                <span style="text-decoration: underline;">underline</span>
+                <span style="text-decoration: overline;">overline</span>
+                <span style="text-decoration: line-through;">line-through</span>
+                <span style="text-decoration: underline dashed;">dashed</span>
+                <span style="text-decoration: underline dotted;">dotted</span>
+                <span style="text-decoration: underline double;">double</span>
+                <span style="text-decoration: underline wavy;">wavy</span>
+                <span style="text-decoration: underline wavy var(--accent-red);">wavy color</span>
+                <span style="text-decoration: underline; text-decoration-thickness: 3px;">
+                    underline 3px
+                </span>
+            </div>
+        </section>
+
+        <section>
+            <h3>Borders</h3>
+            <div>
+                <button type="button" style="border: white 1px solid;">Solid</button>
+                <button type="button" style="border: white 1px dotted;">Dotted</button>
+                <button type="button" style="border: white 1px dashed;">Dashed</button>
+                <button type="button" style="border: white 3px double;">double</button>
+                <button type="button" style="border: white 3px groove;">groove</button>
+                <button type="button" style="border: white 3px ridge;">ridge</button>
+                <button type="button" style="border: white 1px inset;">inset</button>
+                <button type="button" style="border: white 3px inset;">inset 3px</button>
+                <button type="button" style="border: white 1px outset;">outset</button>
+                <button type="button" style="border: white 3px outset;">outset 3px</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        25px x 25px, Copyright &copy; mkaraki
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

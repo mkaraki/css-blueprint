@@ -1,0 +1,180 @@
+.just-line {
+    display: inline-block;
+    height: 2px;
+    background-color: white;
+    margin-right: 10px;
+}
+
+.w-100px {
+    width: 100px;
+}
+
+.w-50px {
+    width: 50px;
+}
+
+.w-25px {
+    width: 25px;
+}
+
+.w-13px {
+    width: 13px;
+}
+
+.w-6px {
+    width: 6px;
+}
+
+.w-3px {
+    width: 3px;
+}
+
+.w-1px {
+    width: 1px;
+}
+
+.circle-20px {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+button.circle-20px {
+    border: none;
+}
+
+.circle-20px-outline {
+    width: 19px;
+    height: 19px;
+    margin: 1px;
+    background-color: transparent;
+    box-shadow: 0 0 0 1pt white;
+}
+
+.circle-20px-accent {
+    width: 18px;
+    height: 18px;
+    margin: 2px;
+    background-color: white;
+    box-shadow: 0 0 0 2pt var(--accent-red);
+}
+
+.circle-20px-text {
+    font-size: 12px;
+    transform: translateY(-4px);
+    text-align: center;
+}
+
+.circle-20px-text>span {
+    display: inline-block;
+    transform: translateX(0.3px) translateY(-1.5px);
+}
+
+.btn-transparent {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.border-dash {
+    border: 1px dashed white;
+}
+
+.border-bottom {
+    border-bottom: 1px solid white;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 1px 6px;
+    text-decoration: underline;
+    color: var(--accent-red);
+    cursor: pointer;
+}
+
+.a-btn {
+    display: inline-block;
+    padding: 1px 6px;
+}
+
+.a-btn,
+.a-btn:link,
+.a-btn:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.loading-marquee-container {
+    position: relative;
+    height: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.loading-marquee {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.loading-marquee-oneline {
+    animation: loading-marquee-oneline 1s linear infinite;
+}
+
+.loading-marquee-wait {
+    animation: loading-marquee-wait 1s linear infinite;
+}
+
+.loading-marquee-style-dots {
+    background-color: transparent;
+    background-image:
+        repeating-linear-gradient(90deg,
+            white,
+            white calc(100% / 14),
+            transparent calc(100% / 14),
+            transparent calc(100% / 7));
+}
+
+@keyframes loading-marquee-oneline {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    30% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes loading-marquee-wait {
+    0% {
+        transform: translateX(-100%);
+        left: 0;
+        right: 0;
+    }
+
+    40% {
+        transform: translateX(0%);
+        right: 30%;
+    }
+
+    60% {
+        transform: translateX(0%);
+        left: 30%;
+    }
+
+    100% {
+        transform: translateX(100%);
+        left: 0;
+        right: 0;
+    }
+}

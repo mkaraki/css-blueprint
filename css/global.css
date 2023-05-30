@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Ubuntu&display=swap');
+
+:root {
+    --grid-color: #406a96;
+    --accent-red: #e73f41;
+    --background-color: #0054ad;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --grid-color: #333;
+        --accent-red: #c81d20;
+        --background-color: #031231;
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    color: white;
+    margin: 15px;
+    min-height: calc(100vh - 30px);
+    background-size: 25px 25px;
+    background-position: 0% 0%;
+    background-image:
+        repeating-linear-gradient(90deg,
+            var(--grid-color),
+            var(--grid-color) 1px,
+            transparent 1px,
+            transparent 25px),
+        repeating-linear-gradient(0deg,
+            var(--grid-color),
+            var(--grid-color) 1px,
+            transparent 1px,
+            transparent 25px);
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
+    font-size: 16px;
+}
+
+header {
+    color: var(--background-color);
+    text-shadow:
+        -1px -1px 0 #ddd,
+        01px -1px 0 #ddd,
+        -1px 01px 0 #ddd,
+        01px 01px 0 #ddd;
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: right;
+    font-size: 14px;
+}
+
+main {
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+main>section {
+    margin-top: 10px;
+}
+
+section>h3 {
+    font-size: 19px;
+}
+
+small {
+    font-size: 12px;
+}
+
+.fs-0 {
+    font-size: 0;
+}
+
+.internal a:link,
+.internal a:visited {
+    color: var(--accent-red);
+    font-weight: bold;
+}
+
+.prod-font {
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: none;
+    font-weight: 400;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 2px;
+    margin: 3px;
+    text-transform: lowercase;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 10px;
+}
