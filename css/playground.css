@@ -18,7 +18,7 @@ button,
 }
 
 header .title {
-    width: 260px;
     border-bottom: 1px dotted white;
-    padding-bottom: 1px
+    padding-bottom: 1px;
+    line-height: 1.15;
 }
