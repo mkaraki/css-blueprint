@@ -93,6 +93,7 @@ button {
     color: white;
     padding: 2px;
     margin: 3px;
+    font-family: 'Major Mono Display', monospace;
     text-transform: lowercase;
 }
 
