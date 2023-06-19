@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Blueprint</title>
+    <title>Samples - CSS Blueprint</title>
     <meta name="description" content="Few CSS only design example for solid style design webpage and application.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -38,11 +38,47 @@
         </div>
 
         <section>
-            <h3>Colors</h3>
-            <div class="internal">
-                <a href="docs/color/oklab/plot.html">oklab</a>
-                (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/oklab" target="_blank"
-                    rel="no-referrer no-follow">MDN</a>)
+            Dash Lines
+            <span class="fs-0">
+                <div class="just-line w-25px"></div>
+                <div class="just-line w-13px"></div>
+                <div class="just-line w-6px"></div>
+                <div class="just-line w-13px"></div>
+                <div class="just-line w-25px"></div>
+            </span>
+        </section>
+
+        <section>
+            Circles
+            <span class="circle-20px"></span>
+
+            Outline
+            <span class="circle-20px circle-20px-outline"></span>
+
+            <small>1px</small>Accent
+            <span class="circle-20px circle-20px-accent"></span>
+
+            Link
+            <a href="javascript:hello()" class="circle-20px" title="Link"></a>
+        </section>
+
+        <section>
+            Buttons
+            <button type="button" class="btn-transparent btn-link prod-font" onclick="hello()">Button</button>
+
+            Link
+            <a href="javascript:hello()" class="a-btn border-dash prod-font" role="button">Link</a>
+        </section>
+
+        <section>
+            Progress
+            <div class="loading-marquee-container">
+                <div class="loading-marquee loading-marquee-oneline"></div>
+            </div>
+
+            Progress <small>with wait</small>
+            <div class="loading-marquee-container">
+                <div class="loading-marquee loading-marquee-wait"></div>
             </div>
         </section>
     </main>

@@ -4,6 +4,12 @@
         <loc>https://css.mkarakiapps.com/</loc>
     </url>
     <url>
+        <loc>https://css.mkarakiapps.com/samples</loc>
+    </url>
+    <url>
         <loc>https://css.mkarakiapps.com/defaults</loc>
+    </url>
+    <url>
+        <loc>https://css.mkarakiapps.com/docs/color/oklab/plot</loc>
     </url>
 </urlset>

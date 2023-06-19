@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oklab Plot - CSS Blueprint</title>
+    <style>
+        body {
+            margin: 15px;
+        }
+
+        .plth {
+            width: 800px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .grad {
+            background: linear-gradient(to right, oklab(var(--l-min) var(--a-min) var(--b-min)), oklab(var(--l-max) var(--a-max) var(--b-max)));
+            height: 1px !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .lgt-sel {
+            width: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>oklab color plot</h1>
+    <p>
+        width: 800px; height: 800px;<br />
+    </p>
+
+    <noscript>
+        This page requires JavaScript.
+    </noscript>
+
+    <section>
+        <h2>y for a | x for b | custom L</h2>
+        <label for="lgt">L: </label>
+        <span id="lgt-v">70%</span><br />
+        <input type="range" id="lgt" class="lgt-sel" value="70" min="0" max="100" step="0.001">
+        <main id="content" style="--l-min: 70%; --l-max: 70%; --b-min: -0.4; --b-max: 0.4;" class="plth">
+        </main>
+    </section>
+
+    <section>
+        <h2>y for L | x for a | custom b</h2>
+        <label for="r-b">b: </label>
+        <span id="r-b-v">0.0</span><br />
+        <input type="range" id="r-b" class="lgt-sel" value="0" min="-0.4" max="0.4" step="0.001">
+        <main id="contentAL" style="--a-min: -0.4; --a-max: 0.4; --b-min: 0; --b-max: 0;" class="plth">
+        </main>
+    </section>
+
+    <section>
+        <h2>y for L | x for b | custom a</h2>
+        <label for="r-a">a: </label>
+        <span id="r-a-v">0.0</span><br />
+        <input type="range" id="r-a" class="lgt-sel" value="0" min="-0.4" max="0.4" step="0.001">
+        <main id="contentBL" style="--b-min: -0.4; --b-max: 0.4; --a-min: 0; --a-max: 0;" class="plth">
+        </main>
+    </section>
+
+    <script>
+        const cont = document.getElementById('content');
+        const contAL = document.getElementById('contentAL');
+        const contBL = document.getElementById('contentBL');
+
+        setTimeout(() => {
+            for (let i = -0.4; i <= 0.4; i += 0.001) {
+                const grad = document.createElement('div');
+                grad.setAttribute('style', `--a-min: ${i}; --a-max: ${i};`);
+                grad.classList.add('grad');
+                cont.appendChild(grad);
+            }
+        }, 0);
+
+        setTimeout(() => {
+            for (let i = 100; i >= 0; i -= 0.125) {
+                const grad = document.createElement('div');
+                grad.setAttribute('style', `--l-min: ${i}%; --l-max: ${i}%;`);
+                grad.classList.add('grad');
+                contAL.appendChild(grad);
+            }
+
+            for (let i = 100; i >= 0; i -= 0.125) {
+                const grad = document.createElement('div');
+                grad.setAttribute('style', `--l-min: ${i}%; --l-max: ${i}%;`);
+                grad.classList.add('grad');
+                contBL.appendChild(grad);
+            }
+        }, 0);
+
+        document.getElementById('lgt').addEventListener('input', (e) => {
+            cont.style.setProperty('--l-min', e.target.value + '%');
+            cont.style.setProperty('--l-max', e.target.value + '%');
+            document.getElementById('lgt-v').innerText = e.target.value + '%';
+        });
+
+        document.getElementById('r-b').addEventListener('input', (e) => {
+            contAL.style.setProperty('--b-min', e.target.value);
+            contAL.style.setProperty('--b-max', e.target.value);
+            document.getElementById('r-b-v').innerText = e.target.value;
+        });
+
+        document.getElementById('r-a').addEventListener('input', (e) => {
+            contBL.style.setProperty('--a-min', e.target.value);
+            contBL.style.setProperty('--a-max', e.target.value);
+            document.getElementById('r-a-v').innerText = e.target.value;
+        });
+    </script>
+</body>
+
+</html>
